@@ -50,6 +50,9 @@ public class PrimitiveTypesWrapperObjects {
 	    	sum += intObject;
 	    }
 	    System.out.println("sum = " + sum);
+	    
+	    // add a line that takes a string representing an integer (e.g. "25"), and outputs a string of
+	    // the initial value multiplied by 3
 	
 	}
 
