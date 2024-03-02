@@ -54,7 +54,12 @@ public class PrimitiveTypesWrapperObjects {
 	    
 	    // add a line that takes a string representing an integer (e.g. "25"), and outputs a string of
 	    // the initial value multiplied by 2
-	
+	    
+	    String num = "25";
+	    int numInteger = Integer.valueOf(num);
+	    numInteger *= 2;
+	    String numString = Integer.toString(numInteger);
+	    System.out.println(numString);
 	}
 
 }
