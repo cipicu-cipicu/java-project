@@ -31,6 +31,7 @@ public class PrimitiveTypesWrapperObjects {
 		// autoboxing
 		// Integer wrapperInt = new Integer(45);
 		Integer wrapperInt = 45;
+		System.out.println(Integer.valueOf("45"));
 		System.out.println("Int primitive type = " + simpleInt);
 		System.out.println("Int wrapper object = " + wrapperInt);
 		
@@ -52,7 +53,7 @@ public class PrimitiveTypesWrapperObjects {
 	    System.out.println("sum = " + sum);
 	    
 	    // add a line that takes a string representing an integer (e.g. "25"), and outputs a string of
-	    // the initial value multiplied by 3
+	    // the initial value multiplied by 2
 	
 	}
 

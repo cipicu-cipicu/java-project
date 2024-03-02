@@ -36,6 +36,9 @@ public class ArraysExamples {
 		System.out.println("intArray2 after cloning");
 		printArray(intArray2);
 		
+		// note - an array has a fixed length. For a variable length array - use an object
+		// such as "ArrayList"
+		
 	}
 	
 	public static void printArray(int[] intArray) {
