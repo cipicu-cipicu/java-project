@@ -60,6 +60,7 @@ public class PrimitiveTypesWrapperObjects {
 	    numInteger *= 2;
 	    String numString = Integer.toString(numInteger);
 	    System.out.println(numString);
+	    
 	}
 
 }
