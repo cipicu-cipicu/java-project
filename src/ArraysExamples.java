@@ -8,6 +8,7 @@ public class ArraysExamples {
 		// of the same type. Created using the "new" operator
 		int[] intArray = new int[100];
 		
+		/*
 		// we can also initialize and assign initial values
 		int[] intArray2 = {1, 3, 5};
 		for (int i = 0; i < intArray2.length; i++) {
@@ -21,7 +22,10 @@ public class ArraysExamples {
 			System.out.println(intElement);
 		}
 		System.out.println("");
+		*/
 		
+		
+		int[] intArray2 = {1, 3, 5};
 		// assign an array variable vs copy (clone) the content
 		System.out.println("intArray2 before");
 		printArray(intArray2);
@@ -38,6 +42,7 @@ public class ArraysExamples {
 		
 		// note - an array has a fixed length. For a variable length array - use an object
 		// such as "ArrayList"
+		
 		
 	}
 	
