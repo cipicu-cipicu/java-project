@@ -14,8 +14,9 @@ For example:
 We will repeat 5 times (array length is 5):
 
 Step 1 to 3:
-[7,12,9,15,11] (compare 7 and 12 - don't switch)
-[7,12,9,11,15] -> [7,9,12,15,11] (compare 12 and 9 - switch)
-[7,9,12,15,11] (compare 12 and 15 - don't switch)
-[7,9,12,15,11] -> [7,9,12,11,15] (compare 15 and 11 - switch)
-[7,9,12,11,15]
+
+[7,12,9,15,11] (compare 7 and 12 - don't switch)  
+[7,12,9,11,15] -> [7,9,12,15,11] (compare 12 and 9 - switch)  
+[7,9,12,15,11] (compare 12 and 15 - don't switch)  
+[7,9,12,15,11] -> [7,9,12,11,15] (compare 15 and 11 - switch)  
+[7,9,12,11,15]  
