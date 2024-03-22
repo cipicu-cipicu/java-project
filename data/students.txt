@@ -33,13 +33,22 @@ student
   gender = female
   enrolled-in-class = Mathematics
   enrolled-in-class = Computers
-  enrolled-in-class = Physics
+  enrolled-in-class = Chemistry
   enrolled-in-class = Biology
   enrolled-in-class = Fitness
 
 student
   first-name = Thomas
   last-name = Wells
+  gender = male
+  enrolled-in-class = Fitness
+  enrolled-in-class = Biology
+  enrolled-in-class = Chemistry
+  enrolled-in-class = Health
+
+student
+  first-name = Elmer
+  last-name = Burns
   gender = male
   enrolled-in-class = Fitness
   enrolled-in-class = Biology
