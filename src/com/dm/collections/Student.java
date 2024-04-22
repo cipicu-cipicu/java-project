@@ -1,6 +1,7 @@
 package com.dm.collections;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.TreeSet;
@@ -12,7 +13,7 @@ public class Student implements Comparable {
 	private String gender;
 	private TreeSet<String> classes;
 
-	public Student(String firstName, String lastName, String gender, TreeSet classes) {
+	public Student(String firstName, String lastName, String gender, TreeSet<String> classes) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.gender = gender;
@@ -47,11 +48,11 @@ public class Student implements Comparable {
 		this.gender = gender;
 	}
 
-	public TreeSet getClasses() {
+	public TreeSet<String> getClasses() {
 		return classes;
 	}
 
-	public void setClasses(TreeSet classes) {
+	public void setClasses(TreeSet<String> classes) {
 		this.classes = classes;
 	}
 
@@ -72,9 +73,7 @@ public class Student implements Comparable {
 		stringOutput += "  first-name = " + firstName + "\n";
 		stringOutput += "  last-name = " + lastName + "\n";
 		stringOutput += "  gander = " + gender + "\n";
-		TreeSet classes2 = (TreeSet) classes.clone();
-		for (int i = 0; i < classes.size(); i++) {
-			String enrolledInClass = (String) classes2.pollFirst();
+		for (String enrolledInClass: classes) {
 			stringOutput += "  enrolled-in-class = " + enrolledInClass + "\n";
 		}
 		return stringOutput;
@@ -82,6 +81,7 @@ public class Student implements Comparable {
 
 	public static ArrayList<Student> fromFile(String fileName) throws Exception {
 		BufferedReader reader = new BufferedReader(new FileReader(fileName));
+		System.out.println("File was not found.");
 		String line = reader.readLine();
 		ArrayList<Student> allStudents = new ArrayList<Student>();
 		while (line != null) {
@@ -97,6 +97,7 @@ public class Student implements Comparable {
 				allStudents.add(Student.fromArrayList(studentLines));
 			}
 		}
+		reader.close();
 		return allStudents;
 	}
 
@@ -106,7 +107,7 @@ public class Student implements Comparable {
 		String lastName = lines.get(2).split("=")[1].trim();
 		String gender = lines.get(3).split("=")[1].trim();
 
-		TreeSet classes = new TreeSet();
+		TreeSet<String> classes = new TreeSet<String>();
 		for (int i = 4; i < lines.size(); i++) {
 			String class1 = lines.get(i).split("=")[1].trim();
 			classes.add(class1);
@@ -138,8 +139,8 @@ public class Student implements Comparable {
 		
 		ArrayList<Student> allStudents = Student.fromFile("data/students.txt");
 		
-		for (int i = 0; i < allStudents.size(); i++) {
-			System.out.println(allStudents.get(i));
+		for (Student student1: allStudents) {
+			System.out.println(student1);
 		}
 	}
 

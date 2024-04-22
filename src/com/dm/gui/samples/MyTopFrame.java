@@ -16,7 +16,7 @@ public class MyTopFrame extends JFrame
 		setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLayout(new BorderLayout());
-		//add(new MyTablePanel(), BorderLayout.CENTER);
+		add(new MyTablePanel(), BorderLayout.CENTER);
 	}
 
 }

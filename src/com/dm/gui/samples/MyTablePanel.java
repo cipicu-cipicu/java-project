@@ -3,6 +3,9 @@ package com.dm.gui.samples;
 import java.awt.BorderLayout;
 import java.awt.Color;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 import javax.swing.BorderFactory;
 import javax.swing.JPanel;
 import javax.swing.JTable;
@@ -12,13 +15,14 @@ import com.dm.collections.Student;
 
 public class MyTablePanel extends JPanel {
 	
-	private Student[] students;
+	private ArrayList<Student> myStudents;
 
 	public MyTablePanel() {
-		students = new Student[3];
-		students[0] = new Student("Mary", "Smith", "female", null);
-		students[1] = new Student("Joe", "Doe", "male", null);
-		students[2] = new Student("Alice", "Martin", "female", null);
+		try {
+			myStudents = Student.fromFile("data/students.txt");
+		} catch (Exception e) {
+			System.out.println("Cannot read from file.");
+		}
 		
 		setLayout(new BorderLayout());
 		setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
@@ -31,7 +35,7 @@ public class MyTablePanel extends JPanel {
 	private class MyTableModel extends AbstractTableModel {
 
 		public int getRowCount() {
-			return students.length;
+			return myStudents.size();
 		}
 
 		@Override
@@ -44,10 +48,10 @@ public class MyTablePanel extends JPanel {
 			String columnValue = "";
 			switch (columnIndex) {
 			case 0:
-				columnValue = students[rowIndex].getFirstName();
+				columnValue = myStudents.get(rowIndex).getFirstName();
 				break;
 			case 1:
-				columnValue = students[rowIndex].getLastName();
+				columnValue = myStudents.get(rowIndex).getLastName();
 				break;
 			}
 			return columnValue;
