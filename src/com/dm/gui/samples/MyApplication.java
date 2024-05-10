@@ -5,8 +5,7 @@ import javax.swing.SwingUtilities;
 public class MyApplication
 {
 
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		SwingUtilities.invokeLater(() ->
 		{
 			MyTopFrame frame = new MyTopFrame();

@@ -15,7 +15,7 @@ import com.dm.collections.Student;
 
 public class MyTablePanel extends JPanel {
 	
-	private ArrayList<Student> myStudents;
+	public ArrayList<Student> myStudents;
 
 	public MyTablePanel() {
 		try {
