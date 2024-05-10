@@ -3,6 +3,7 @@ package com.dm.gui.images;
 import java.awt.Image;
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
@@ -33,8 +34,11 @@ public class ReadImage {
 			imageEmma = ImageIO.read(file);
 			
 			// Daniel Radcliffe
-			file = new File("data/daniel.jpg");
-			imageDaniel = ImageIO.read(file);
+			//file = new File("data/daniel.jpg");
+			URL url = new URL("https://image.tmdb.org/t/p/original/eOh4ubpOm2Igdg0QH2ghj0mFtC.jpg");
+			imageDaniel = ImageIO.read(url);
+			System.out.println("height: " + imageDaniel.getHeight(null) + " width: " + imageDaniel.getWidth(null));
+			imageDaniel = imageDaniel.getScaledInstance(imageDaniel.getWidth(null) / 2, imageDaniel.getHeight(null) / 2, 0);
 
 		} catch (IOException e) {
 			System.out.println("Cannot load image...");

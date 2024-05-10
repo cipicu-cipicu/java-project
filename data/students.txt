@@ -2,6 +2,7 @@ student
   first-name = Madison
   last-name = Mullins
   gender = female
+  profile-image-url = https://image.tmdb.org/t/p/original/A14lLCZYDhfYdBa0fFRpwMDiwRN.jpg
   enrolled-in-class = Physics
   enrolled-in-class = Chemistry
   enrolled-in-class = Music
