@@ -45,10 +45,10 @@ public class ReadImage {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		JLabel label = new JLabel();
-		//label.setHorizontalAlignment(JLabel.CENTER);
-		label.setIcon(new ImageIcon(imageBlank));
+		label.setHorizontalAlignment(JLabel.CENTER);
+		//label.setIcon(new ImageIcon(imageBlank));
 		//label.setIcon(new ImageIcon(imageEmma));
-		//label.setIcon(new ImageIcon(imageDaniel));
+		label.setIcon(new ImageIcon(imageDaniel));
 
 		frame.add(label);
 		frame.setVisible(true);
